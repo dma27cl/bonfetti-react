@@ -1,0 +1,13 @@
+.topbar {
+  width: 100%;
+  background-color: #ff6f91;
+  color: white;
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.topbar p {
+  margin: 0;
+}
