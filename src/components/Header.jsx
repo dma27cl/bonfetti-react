@@ -1,32 +1,53 @@
+import { useState } from "react";
 import "../styles/Header.css";
 import logo from "../assets/img/logobon.png";
 
 
 function Header() {
-    return (
-        <header className="header">
-            <div className="header-container">
-                <nav className="nav nav-left">
-                    <a href="#">Inicio</a>
-                     <a href="#productos">Productos</a>
-                </nav>
-               
-                <a className="logo" href="#">
-                    <img src={logo} alt="Bonfetti Logo" />
-                </a>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-                <nav className="nav nav-right">
-                    <a href="#productos">Empresas</a>
-                    <a href="#productos">Contacto</a>
-                </nav>
+  return (
+    <header className="header">
 
-              {/*  <a className="header-button" href="#productos">
-                    Ver productos
-                </a>*/}
+      <div className="header-container">
 
-            </div>
-        </header>
-    );
+        <nav className="nav nav-left">
+          <a href="#">Inicio</a>
+             <a href="productos">Productos</a>
+        </nav>
+
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a className="logo" href="#">
+          <img src={logo} alt="Bonfetti" />
+        </a>
+
+        <nav className="nav nav-right">
+          <a href="#empresas">Empresas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+      </div>
+
+      {menuOpen && (
+        <nav className="mobile-menu">
+          <a href="#">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      )}
+
+    </header>
+  );
 }
 
 export default Header;
