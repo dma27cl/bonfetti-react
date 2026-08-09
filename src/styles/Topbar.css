@@ -1,13 +1,37 @@
+
 .topbar {
   width: 100%;
-  background-color: #ff6f91;
+  background-color: #fd828e;
   color: white;
-  text-align: center;
-  padding: 8px 20px;
-  font-size: 13px;
-  box-sizing: border-box;
+  overflow: hidden;
+  padding: 9px 0;
 }
 
-.topbar p {
+.topbar span {
   margin: 0;
+   font-family: "Mali", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+/*.topbar-track {
+  display: flex;
+  width: max-content;
+  gap: 50px;
+  white-space: nowrap;
+  animation: movimiento 18s linear infinite;
+}
+
+.topbar-track span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@keyframes movimiento {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}*/

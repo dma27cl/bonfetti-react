@@ -1,9 +1,12 @@
-import "./Topbar.css";
+import "../styles/Topbar.css";
 
-function Topbar(){
+function Topbar() {
     return (
         <div className="topbar">
-            <p>productos</p>
+            <div className="topbar-track">
+                <span>✦ Productos personalizados ✦</span>
+             
+            </div>
         </div>
     )
 }
